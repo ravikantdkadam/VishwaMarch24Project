@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="29.506" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="FreeCRM application Test" name="Create Conatct Test" time="29.069">
+<system-out><![CDATA[
+Given Launch the browser and open url.......................................passed
+Then user is on login page..................................................passed
+When user enter the username "rvkadam25@gmail.com" and password "Ravikant@25".passed
+And Click on login button...................................................passed
+Then user should on the homepage............................................passed
+When user move and click on the contact tab.................................passed
+Then user is on contact page................................................passed
+Then Click on Create button.................................................passed
+Then Enter the following details and click on save Button...................passed
+]]></system-out>
+</testcase>
+</testsuite>

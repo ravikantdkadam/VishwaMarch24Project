@@ -71,7 +71,7 @@ public class TestBase {
 		public static void Takescreenshot() throws IOException {
 			TakesScreenshot  ts= (TakesScreenshot) driver;
 			File src = ts.getScreenshotAs(OutputType.FILE);
-			File dest = new File ("D:\\C drive Data 26_06_23\\eclipse-workspace\\POMCumcumberOct\\Screenshots\\pom1.png");
+			File dest = new File ("D:\\C drive Data 26_06_23\\eclipse-workspace\\VishwaMarch24CucumberProject\\target\\sucess.png");
 			FileUtils.copyFile(src, dest);
 		
 		}
