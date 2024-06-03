@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 
 	@CucumberOptions( 
 			
-			features = "src\\main\\resources\\Feature\\CreateContact.feature",    // The path to the feature file is specified by feature options 
+			features = "src\\main\\resources\\Feature\\loginFreeCrm.feature",    // The path to the feature file is specified by feature options 
 			
 			glue={"StepDefination"},   // This argument used to provide step definition file location
 			
@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions;
 			
 		   monochrome =true , // Display the console output in readable format 
 		   
-					//tags= "@SmokeTest and  @RegressionTest",
+				//	tags= "@Sanity",
 		   
 		      // tags= "not @SmokeTest",  // Ignore Test case 
 					

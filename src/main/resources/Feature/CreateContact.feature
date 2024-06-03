@@ -1,5 +1,6 @@
 Feature: FreeCRM application Test 
 
+@Sanity
 Scenario: Create Conatct Test  
 Given Launch the browser and open url
 Then user is on login page 

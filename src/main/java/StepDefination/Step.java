@@ -15,33 +15,43 @@ import PageClasses.CreateConatctPage;
 import PageClasses.loginpage;
 import Utils.TestBase;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
 public class Step extends TestBase  {
-public WebDriver driver;
-public loginpage lp ;
-public CreateConatctPage addcont;
-
 
 	
+	@Before      // it will run before each sceanrio 
 	
+	public void setup() {
+		
+		 driver= new FirefoxDriver();
+	
+		 lp =new loginpage(driver);     // loginpage class initiation
+		
+		
+		TestBase.initilizations();     // launch the browser and open the url 
+
+	System.out.println("Launch the browser");
+	}
+	
+	
+	@After                // it will run after each scenario
+	
+	public void tear() {
+		
+		
+		driver.close();
+		
+		System.out.println("Close the browser");
+	} 
+	
+
 @Given("Launch the browser and open url")
 	public void launch_the_browser_and_open_url() {
 	
-	driver=new FirefoxDriver();    // driver initiation 
-	 lp =new loginpage(driver);     // loginpage class initiation
-	
-	
-	TestBase.initilizations();
-
-    driver.manage().window().maximize();
-	driver.manage().deleteAllCookies();
-
-   driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-   
-   driver.get(prop.getProperty("url"));
-   
+	System.out.println("Launched each step from TestBase Class");
 
 }
 
@@ -59,7 +69,8 @@ Assert.assertEquals("Cogmento CRM", Title);
 }
 
 @When("user enter the username {string} and password {string}")
-public void user_enter_the_username_and_password(String email, String password) {
+public void user_enter_the_username_and_password(String email, String password)  {
+
 	lp.setusername(email);
 	lp.setpassword(password);
 	
@@ -79,7 +90,6 @@ public void user_should_on_the_homepage() throws IOException {
 	{
 		Assert.assertTrue(false, "Wrong username or password ");
 		
-
 	
 	}
 	
@@ -145,13 +155,6 @@ public void enter_the_following_details_and_click_on_save_button(DataTable Conta
 	
 	addcont.saveConatct();
 	
-//	driver.findElement(By.name("first_name")).sendKeys(contactdetails.get(0).get(0));  
-//	driver.findElement(By.name("middle_name")).sendKeys(contactdetails.get(0).get(1));   
-//	driver.findElement(By.name("last_name")).sendKeys(contactdetails.get(0).get(2));     
-//	driver.findElement(By.xpath("//input[@placeholder='Email address']")).sendKeys(contactdetails.get(0).get(3));   //email
-//	
-//	driver.findElement(By.xpath("//button[@Class='ui linkedin button']")).click();
-//	
-  
+
 }
 }

@@ -1,5 +1,5 @@
 Feature: FreeCRM application Test 
-
+@Sanity
 Scenario: Create loginpage Test with valid credentials 
 Given Launch the browser and open url
 Then user is on login page 
