@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="49.515" tests="3" skipped="0" failures="2" errors="0">
-<testcase classname="FreeCRM application Test" name="Create loginpage Test with valid credentials" time="17.607">
+<testsuite name="Cucumber" time="48.648" tests="3" skipped="0" failures="2" errors="0">
+<testcase classname="FreeCRM application Test" name="Create loginpage Test with valid credentials" time="20.361">
 <system-out><![CDATA[
 Given Launch the browser and open url.......................................passed
 Then user is on login page..................................................passed
@@ -9,25 +9,49 @@ And Click on login button...................................................pass
 Then user should on the homepage............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="FreeCRM application Test" name="Login Test with invalid creadentials - Example #1.1" time="15.687">
-<failure type="java.lang.AssertionError" message="Wrong username or password  expected [true] but found [false]">
-<![CDATA[java.lang.AssertionError: Wrong username or password  expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at StepDefination.Step.user_should_on_the_homepage(Step.java:91)
-	at ✽.user should on the homepage(file:///D:/C%20drive%20Data%2026_06_23/eclipse-workspace/VishwaMarch24CucumberProject/src/main/resources/Feature/loginFreeCrm.feature:16)
+<testcase classname="FreeCRM application Test" name="Login Test with invalid creadentials - Example #1.1" time="10.038">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="Browsing context has been discarded
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [c8faa494-1f8e-4e32-ba9f-39e18342e170, getTitle {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 126.0.1, moz:accessibilityChecks: false, moz:buildID: 20240526221752, moz:debuggerAddress: 127.0.0.1:32509, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 42232, moz:profile: C:\Users\user\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32509/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: c8faa494-1f8e-4e32-ba9f-39e18342e170">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [c8faa494-1f8e-4e32-ba9f-39e18342e170, getTitle {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 126.0.1, moz:accessibilityChecks: false, moz:buildID: 20240526221752, moz:debuggerAddress: 127.0.0.1:32509, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 42232, moz:profile: C:\Users\user\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32509/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: c8faa494-1f8e-4e32-ba9f-39e18342e170
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:306)
+	at StepDefination.Step.user_is_on_login_page(Step.java:62)
+	at ✽.user is on login page(file:///D:/C%20drive%20Data%2026_06_23/eclipse-workspace/VishwaMarch24CucumberProject/src/main/resources/Feature/loginFreeCrm.feature:13)
 ]]>
 </failure>
 <system-out><![CDATA[
 Given Launch the browser and open url.......................................passed
-Then user is on login page..................................................passed
-When user enter the username "rvkadam25@gmail.com" and password "Ravikant123".passed
-And Click on login button...................................................passed
-Then user should on the homepage............................................failed
+Then user is on login page..................................................failed
+When user enter the username "rvkadam25@gmail.com" and password "Ravikant123".skipped
+And Click on login button...................................................skipped
+Then user should on the homepage............................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="FreeCRM application Test" name="Login Test with invalid creadentials - Example #1.2" time="15.845">
+<testcase classname="FreeCRM application Test" name="Login Test with invalid creadentials - Example #1.2" time="17.765">
 <failure type="java.lang.AssertionError" message="Wrong username or password  expected [true] but found [false]">
 <![CDATA[java.lang.AssertionError: Wrong username or password  expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
